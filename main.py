@@ -16,7 +16,7 @@ def format(person):
     description = person["description"]
     country = person["country"]
     follower_count = person["follower_count"]
-    return f"{name}, a {description}, from {country}, follower count is {follower_count}"
+    return f"{name}, a {description}, from {country}"
 
 def play():
     # Variables
@@ -44,8 +44,10 @@ def play():
 
         if result == answer:
             score += 1
+            print("Correct!")
         else:
             lives -= 1
+            print("Wrong!")
 
         if lives == 0:
             more_game = False
